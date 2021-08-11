@@ -7,7 +7,7 @@
 
 import Foundation
 
-//CyclicPermutation.main()
+CyclicPermutation.main()
 // ---------
 // Input Example
 // ---------
@@ -24,47 +24,13 @@ import Foundation
 // Output => 3, 7, 1, 1
 //---------
 
-// 57 2
-// => 4
+print("-------------\n")
 
-func pow (_ base:Int, _ power:UInt) -> Int {
-  var answer : Int = 1
-  for _ in 0..<power { answer *= base }
-  return answer
-}
-
-func calcSumOfEachDigitPowed(_ num: Int, _ exponent: UInt) -> Int{
-    var n = num
-    var sum = 0;
-    while(n != 0 ){
-        let digit = Int(n % 10)
-        sum += pow(digit, exponent)
-        n = n / 10
-    }
-    return sum
-}
-
-func main(){
-    let inputs = readLine()!.split(separator: " ").map { Int($0)! }
-    let num = inputs[0]
-    let exponent = UInt(inputs[1])
-    var histories = [Int:Int]();
-    let position = 0
-    let count = getNumberOfElementsInNonPartOfRepeating(&histories, num, exponent, position)
-    print("count:", count)
-}
-
-
-func getNumberOfElementsInNonPartOfRepeating(_ histories: inout [Int:Int], _ num: Int, _ exponent: UInt, _ position: Int ) -> Int {
-    // base case
-    if let prevPosition = histories[num] { return prevPosition }
-    
-    // recursive case
-    histories[num] = position;
-    let newPosition = position + 1;
-    let newNum = calcSumOfEachDigitPowed(num, exponent)
-    return getNumberOfElementsInNonPartOfRepeating(&histories, newNum, exponent, newPosition)
-    
-}
-
-main()
+RepeatingSequence.main()
+// ---------
+// Input Example
+// ---------
+//57 2
+//---------
+// Output => 4
+//---------

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24F90E5726C466CA00E88B8B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F90E5626C466CA00E88B8B /* main.swift */; };
 		24F90E5E26C4677800E88B8B /* CyclicPermutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F90E5D26C4677800E88B8B /* CyclicPermutation.swift */; };
+		24F90E6026C4953900E88B8B /* RepeatingSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F90E5F26C4953900E88B8B /* RepeatingSequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		24F90E5326C466CA00E88B8B /* CyclicPermutationAndRepeatingSequence */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CyclicPermutationAndRepeatingSequence; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F90E5626C466CA00E88B8B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		24F90E5D26C4677800E88B8B /* CyclicPermutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclicPermutation.swift; sourceTree = "<group>"; };
+		24F90E5F26C4953900E88B8B /* RepeatingSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingSequence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				24F90E5626C466CA00E88B8B /* main.swift */,
+				24F90E5F26C4953900E88B8B /* RepeatingSequence.swift */,
 				24F90E5D26C4677800E88B8B /* CyclicPermutation.swift */,
 			);
 			path = CyclicPermutationAndRepeatingSequence;
@@ -122,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F90E6026C4953900E88B8B /* RepeatingSequence.swift in Sources */,
 				24F90E5726C466CA00E88B8B /* main.swift in Sources */,
 				24F90E5E26C4677800E88B8B /* CyclicPermutation.swift in Sources */,
 			);

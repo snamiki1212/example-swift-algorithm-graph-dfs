@@ -11,7 +11,7 @@ struct CyclicPermutation {
     static func main(){
         let numOfCases = Int(readLine()!)!
         
-        for _ in 0...numOfCases {
+        for _ in 0..<numOfCases {
             let len = Int(readLine()!)!
             
             let list = readLine()!.split(separator: " ").map { str in
