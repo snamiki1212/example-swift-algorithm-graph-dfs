@@ -20,25 +20,27 @@ func main(){
         for (from, to) in list.enumerated() {
             adjList[from + 1] = to
         }
-        printNumOfCycles(adjList: adjList)
+        printNumOfCycles(adjList)
     }
 }
 
-func printNumOfCycles(adjList: [Int]){
-    // count up how many cycles
-    
+func getNumberOfCycles(adjList: [Int]) -> Int {
     var visited = [Bool](repeating: false, count: adjList.count + 1)
     var count = 0;
     for from in 1..<adjList.count {
         if visited[from] { continue }
         var cycle = [Bool](repeating: false, count: adjList.count + 1)
-        if dfs(adjList, &visited, &cycle, from) { count += 1 }
+        if isCycle(adjList, &visited, &cycle, from) { count += 1 }
     }
-    
+    return count
+}
+
+func printNumOfCycles(_ adjList: [Int]){
+    let count = getNumberOfCycles(adjList: adjList)
     print("adjList", adjList, count)
 }
 
-func dfs(_ adjList: [Int], _ visited: inout [Bool], _ cycle: inout [Bool], _ from: Int) -> Bool {
+func isCycle(_ adjList: [Int], _ visited: inout [Bool], _ cycle: inout [Bool], _ from: Int) -> Bool {
     // base case
     if visited[from] && cycle[from] { return true }
     if visited[from] && !cycle[from] { return false }
@@ -47,7 +49,7 @@ func dfs(_ adjList: [Int], _ visited: inout [Bool], _ cycle: inout [Bool], _ fro
     visited[from] = true
     cycle[from] = true
     let to = adjList[from]
-    return dfs(adjList, &visited, &cycle, to)
+    return isCycle(adjList, &visited, &cycle, to)
 }
 
 main()
